@@ -1,6 +1,6 @@
 from python_laodt import *
 
-data = '''ຂ້ອຍບາລັດຄູດາ ຄວາຍ'''
+data = '''ຂ້ອຍບາລັດຄູດາ ຄວາມໝາຍ ທົດລອງ ທົດສອບ ສ້າງງມັນ'''
 
 en_text = lao_dte(data)
 

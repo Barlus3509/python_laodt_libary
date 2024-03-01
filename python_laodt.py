@@ -346,6 +346,13 @@ def lao_dte(data):
                 if x < text_len and lao_text_arry[x] in vannayud:
                     tps += lao_text_arry[x]
                     x += 1
+            elif lao_text_arry[x] in sala7:
+                tps += lao_text_arry[x]
+                x += 1
+                if x + 1 < text_len:
+                    if lao_text_arry[x] in tuasakod and not lao_text_arry[x+1] in sala2 + sala3 + sala4 + sala6 + sala7 + vannayud + vannayud1:
+                        tps += lao_text_arry[x]
+                        x += 1
         
         elif  x < text_len and lao_text_arry[x] in number:
               tps += lao_text_arry[x]
