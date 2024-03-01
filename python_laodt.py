@@ -147,14 +147,48 @@ def lao_dte(data):
                                 x += 1
             
             elif x < text_len and lao_text_arry[x] in vannayud:
+                tps += lao_text_arry[x]
+                x += 1
+                if lao_text_arry[x] in sala2:
                     tps += lao_text_arry[x]
                     x += 1
-                    if lao_text_arry[x] in sala2:
+                    if x + 1 < text_len:
+                        if lao_text_arry[x] in tuasakod and not lao_text_arry[x+1] in sala2 + sala3 + sala4 + sala6 + sala7 + vannayud + vannayud1:
+                            tps += lao_text_arry[x]
+                            x += 1
+        
+                elif x < text_len and lao_text_arry[x] in sala7:
+                    tps += lao_text_arry[x]
+                    x += 1
+                    if x + 1 < text_len:
+                        if lao_text_arry[x] in tuasakod and not lao_text_arry[x+1] in sala2 + sala3 + sala4 + sala6 + sala7 + vannayud + vannayud1:
+                            tps += lao_text_arry[x]
+                            x += 1
+                    elif lao_text_arry[x] in tuasakod:
                         tps += lao_text_arry[x]
                         x += 1
-                        if x < text_len and lao_text_arry[x] in tuasakod:
-                                    tps += lao_text_arry[x]
-                                    x += 1
+
+            elif x < text_len and (lao_text_arry[x] in sala3 or lao_text_arry[x] in sala2 or lao_text_arry[x] in vannayud1):
+                tps += lao_text_arry[x]
+                x += 1
+                if x < text_len and lao_text_arry[x] in vannayud:
+                    tps += lao_text_arry[x]
+                    x += 1
+                    if x < text_len and lao_text_arry[x] in tuasakod:
+                            tps += lao_text_arry[x]
+                            x += 1
+                elif x + 1 < text_len:
+                    if lao_text_arry[x] in tuasakod and not lao_text_arry[x+1] in sala2 + sala3 + sala4 + sala6 + sala7 + vannayud + vannayud1:
+                        tps += lao_text_arry[x]
+                        x += 1
+                    elif lao_text_arry[x] in tuasakod and lao_text_arry[x+1] in sala7:
+                        if x + 2 < text_len:
+                            if x < text_len and lao_text_arry[x] in tuasakod and not lao_text_arry[x+2] in sala2 or sala3 or sala4 or sala6 or vannayud or vannayud1:
+                                tps += lao_text_arry[x]
+                                x += 1
+                elif x < text_len and lao_text_arry[x] in tuasakod:
+                    tps += lao_text_arry[x]
+                    x += 1
 
             elif x < text_len and lao_text_arry[x] in sala2:
                 tps += lao_text_arry[x]
@@ -167,20 +201,10 @@ def lao_dte(data):
                 tps += lao_text_arry[x]
                 x += 1
 
-            elif x < text_len and lao_text_arry[x] in sala3 or lao_text_arry[x] in vannayud1:
-                        tps += lao_text_arry[x]
-                        x += 1
-                        if x < text_len and lao_text_arry[x] in vannayud:
-                            tps += lao_text_arry[x]
-                            x += 1
-                            if x < text_len and lao_text_arry[x] in tuasakod:
-                                        tps += lao_text_arry[x]
-                                        x += 1
-                        elif x < text_len and lao_text_arry[x] in tuasakod:
-                                tps += lao_text_arry[x]
-                                x += 1
-            
-            elif x < text_len and lao_text_arry[x] in sala4:
+            elif x < text_len and lao_text_arry[x] in sala6:
+                tps += lao_text_arry[x]
+                x += 1
+                if x < text_len and lao_text_arry[x] in vannayud:
                     tps += lao_text_arry[x]
                     x += 1
 
@@ -271,9 +295,7 @@ def lao_dte(data):
                         if lao_text_arry[x] in tuasakod and not lao_text_arry[x+1] in sala2 + sala3 + sala4 + sala6 + sala7 + vannayud + vannayud1:
                             tps += lao_text_arry[x]
                             x += 1
-                    elif lao_text_arry[x] in tuasakod:
-                        tps += lao_text_arry[x]
-                        x += 1
+        
                 elif x < text_len and lao_text_arry[x] in sala7:
                     tps += lao_text_arry[x]
                     x += 1

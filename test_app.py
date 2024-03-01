@@ -1,6 +1,6 @@
 from python_laodt import *
 
-data = '''ນີ້ຄືຕົວຢ່າງ python laodt libary ໝາກກ້ຽງ ຄວາຍ ໂປແກມເມີອາຍຸນ້ອຍ'''
+data = '''ຂ້ອຍບາລັດຄູດາ ຄວາຍ'''
 
 en_text = lao_dte(data)
 
