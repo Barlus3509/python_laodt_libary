@@ -18,3 +18,9 @@ print(f'Text to array :  {en_text}')
 de_text = lao_dtd(en_text)      #ການເອົາ Array ກັບໄປເປັນຂໍ້ຄວາມ
 print(f'Array to text :  {de_text}')
 ```
+  
+ຜົນລັບ
+```
+Text to array :  ['ຂໍ້', 'ຄວາມ']
+Array to text :  ຂໍ້ຄວາມ
+```
